@@ -1,18 +1,17 @@
-organization := "com.harana"
-
-name := "play-scala-osgi"
-
-version := "1.0"
 
 scalaVersion := "2.12.8"
 
-publishMavenStyle := true
+ThisBuild / organization := "com.harana"
 
-publishArtifact in (Compile, packageDoc) := false
+ThisBuild / version := "1.0"
 
-publishArtifact in (Compile, packageSrc) := false
+ThisBuild / licenses += ("Apache-2.0", url("https://www.apache.org/licenses/LICENSE-2.0.html"))
 
 lazy val PlayScalaOSGI = (project in file(".")).enablePlugins(PlayScala).settings(
+  name := "play-scala-osgi",
+
+  bintrayOrganization := Some("harana"),
+
   libraryDependencies ++= Seq(
     "org.apache.felix" % "org.apache.felix.framework" % "5.6.12"
   )

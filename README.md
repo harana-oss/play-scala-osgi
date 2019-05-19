@@ -8,6 +8,12 @@ Add this library to both your server and plugins:
 com.harana %% play-scala-osgi % 1.0
 ```
 
+It is published to JCenter so you may need to add the following resolver:
+
+```
+resolvers += Resolver.jcenterRepo
+```
+
 #### Server
 
 Make sure you have bundles and plugins directories created.
